@@ -61,6 +61,16 @@ The following directory structure fully describes the project
 Inside include/sites-enabled is the configuration of the server where we will install our project.
 Inside web is all our php project. The silly project for pentesting
 
+### TIPS
+
+Bajo ambiente Windows 10 hemos visto algunos problemas, luego que se ejecuta ```docker-compose up``` el servidor se levanta pero no se pueden editar los "messajes", es un problema de permisos dentro del container.  Por alguna razón solo pasa bajo ciertas circunstancia en Windows 10, especialmente si tiene VirtualBox o VMware instalado. 
+Para solucionar deben ingresar al container:
+
+```
+docker exec -ti demo-xss-csrf_web_1 /bin/bash
+```
+y luego revisar los permisos de la carpeta ```/var/www/html```  que deben ser *www-data* o *root*.
+
 
 ## Authors
 
