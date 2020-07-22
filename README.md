@@ -9,13 +9,34 @@ Un demo completo para para practicar sobre ténicas XSS, CSRF y SQL Injection
 
 ## Getting Started - Para comenzar
 
-En la raiz del proyecto:
+Descargar o clonar el proyecto: 
+
+```
+git clone git@github.com:Piuliss/demo-xss-csrf.git
+```
+
+con la linea de comandos dirigirse a la raiz del proyecto:
 
 ```
 docker-compose up --build -d
 ```
 
+En el navegador dirigirse a ```http://localhost:9991```
+
 En la carpeta **logs**  puede encontrar los logs del servidor apache2
+
+### Comandos Utiles
+
+Para tener acceso a la shell del servidor montado:
+```
+docker exec -ti demo-xss-csrf_web_1 /bin/bash
+```
+
+Para dar de baja el servidor o apagar el servicio docker levantado
+
+```
+docker-compose down
+```
 
 ### Prerequisites - Prerequesitos
 
